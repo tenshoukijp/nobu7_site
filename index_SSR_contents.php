@@ -7,6 +7,8 @@ $content_hash = [
         [ 'html'=>'nobu_mod_img_face.html', 'title'=>'顔グラ' , 'dir'=>''],
     'nobu_mod_img_kahou' =>
         [ 'html'=>'nobu_mod_img_kahou.html', 'title'=>'家宝グラ' , 'dir'=>''],
+    'nobu_mod_tool_savedata_editor' =>
+        [ 'html'=>'nobu_mod_tool_savedata_editor.html', 'title'=>'セーブデータエディタ' , 'dir'=>''],
     'nobu_tool_movie_2x_convert' =>
         [ 'html'=>'nobu_tool_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'']
 ];
@@ -22,7 +24,6 @@ $filetime_hash = [
         './cnt_movie/TsMovie2xConverter.zip',
     'nobu_mod_the_testsiningchange' =>
         './other_soft/testsignchange/TestSigningBird.zip'
-
 
 ];
 ?>

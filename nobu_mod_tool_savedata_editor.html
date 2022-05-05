@@ -3,11 +3,7 @@
 </div>
 <div class="content-box mb-3 content-lighten">
     <h3>将星記 with PK のセーブデータをゲーム画面と同様のGUIにて編集できるツール</h3>
-    <ol>
-        <li>要するにこうなる<br>
-            ↓<br>
-            <img src="./cnt_savedat_editor/cnt_savedat_editor_01.png">
-    </ol>
+    <p><img src="./cnt_savedat_editor/cnt_savedat_editor_01.png"></p>
 </div>
 <div class="content-box mb-3 content-lighten">
     <h3>ダウンロード</h3>
@@ -30,8 +26,12 @@
 <div class="content-box mb-3 content-lighten">
     <h3>使用方法</h3>
     <ul>
-        <li>Sho098a.EXE を実行して、解凍先を選択、ShouseiP.exe を 「将星録フォルダ(インストールされてるフォルダ)」へとコピーします。</li>
-        <li>起動には、セーブデータが必要ですが、このツールが制作された当初と、Steam版 や 30周年記念版では セーブデータの位置が変化しています。
+        <li>Sho098a.EXE を実行して、解凍先を選択、ShouseiP.exe を 「将星録フォルダ(インストールされているフォルダ＝下図)」へとコピーします。</li>
+        <p><img src="./cnt_savedat_editor/cnt_savedat_editor_02.png"></p>
+        <li>起動には、セーブデータが必要です。<br>
+            <mark>このツールが制作された当初、将星録のセーブデータはフォルダーにありました</mark>。<br>
+            しかし、Steam版 や 30周年記念版では、<mark>セーブデータの位置が変化</mark>しています。<br>
+            このため、
             <fieldset class="code">
                 <legend>Steam版 (35周年版)</legend>
                 <pre class="brush:powershell;">
@@ -47,23 +47,8 @@ C:\Users\%USERNAME%\Documents\Koei\Nobunaga7anniv\SAVEDATA
             </fieldset>
             <p>などのフォルダからご自身のセーブデータを探し出し、「将星録フォルダ」へとコピーしてください。</p>
         </li>
-        <li>編集対象は、このコピーしたファイルとなります。<br>
-            編集した後は、元のフォルダのものを上書きしいてください。<br>
+        <li>編集対象は、この将星録フォルダ内セーブデータとなります。<br>
+            編集した後は、元のフォルダのものを上書きしてください。<br>
         </li>
     </ul>
-</div>
-
-<div class="content-box mb-3 content-lighten">
-    <h3>古いゲームなどでセーブデータの位置が変更してしまっているものはハードリンクを使うと便利</h3>
-    <p>ファイルをハードリンクさせると、異なる２つのフォルダに存在するファイルを<br>
-        １つの実体とみなせるため、便利です。<br>
-        (いちいちコピーしたり戻したりといった手間がなくなります)<br>
-        ハードリンクについては、</p>
-    <fieldset class="code">
-        <legend>コンソールコマンド</legend>
-        <pre class="brush:powershell;">
-mklink /H ******
-                </pre>
-    </fieldset>
-    <p>といったコマンドとなります。</p>
 </div>
