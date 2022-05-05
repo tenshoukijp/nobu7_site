@@ -10,6 +10,21 @@ Header add Pragma "no-cache"
 Header set Cache-Control no-cache
 </Files>
 
+<IfModule mod_mime.c>
+AddType font/opentype         .otf
+AddType font/eot              .eot
+AddType font/truetype         .ttf
+AddType application/font-woff .woff
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE font/opentype font/eot font/truetype application/font-woff
+</IfModule>
+
+<Files ~  "\.(?i:(otf|ttf|eot|woff)(\.gz)?)$">
+ExpiresDefault A25920000
+</Files>
+
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresByType text/css "access plus 15 days"
