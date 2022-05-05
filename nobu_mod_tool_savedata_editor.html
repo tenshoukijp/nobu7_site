@@ -1,0 +1,69 @@
+<div class="content-box mb-3 content-lighten">
+    <h2><i class="fa fa-image fa-fw"></i>セーブデータエディタ</h2>
+</div>
+<div class="content-box mb-3 content-lighten">
+    <h3>将星記 with PK のセーブデータをゲーム画面と同様のGUIにて編集できるツール</h3>
+    <ol>
+        <li>要するにこうなる<br>
+            ↓<br>
+            <img src="./cnt_savedat_editor/cnt_savedat_editor_01.png">
+    </ol>
+</div>
+<div class="content-box mb-3 content-lighten">
+    <h3>ダウンロード</h3>
+    <div class="card mb-3 ml-3" style="max-width: 30rem;">
+        <!-- カード本文：card-body -->
+        <div class="card-body text-center">
+            <div class="row">
+                <div class="col-12"><small>更新日 1999/06/29</small></div>
+            </div>
+            <a href="http://web.archive.org/web/20030714163036/server30.hypermart.net/eeoayh/shousei.htm" class="btn btn-primary"><i class="fa fa-download fa-fw"></i>セーブデータエディタ for Windows98 ベータ版 Ver 0.9.8a</a>
+        </div>
+    </div>
+</div>
+<div class="content-box mb-3 content-lighten">
+    <h3>動作環境</h3>
+    <ul>
+        <li><img src="https://img.shields.io/badge/将星録-with_PK-6479ff.svg"> <img src="https://img.shields.io/badge/Steam-OK-6479ff.svg"> <img src="https://img.shields.io/badge/30周年記念-OK-6479ff.svg"></li>
+    </ul>
+</div>
+<div class="content-box mb-3 content-lighten">
+    <h3>使用方法</h3>
+    <ul>
+        <li>Sho098a.EXE を実行して、解凍先を選択、ShouseiP.exe を 「将星録フォルダ(インストールされてるフォルダ)」へとコピーします。</li>
+        <li>起動には、セーブデータが必要ですが、このツールが制作された当初と、Steam版 や 30周年記念版では セーブデータの位置が変化しています。
+            <fieldset class="code">
+                <legend>Steam版 (35周年版)</legend>
+                <pre class="brush:powershell;">
+C:\Users\%USERNAME%\Documents\Koei\35th\信長の野望・将星録 with パワーアップキット
+                </pre>
+            </fieldset>
+            <p>あるいは、</p>
+            <fieldset class="code">
+                <legend>30周年版</legend>
+                <pre class="brush:powershell;">
+C:\Users\%USERNAME%\Documents\Koei\Nobunaga7anniv\SAVEDATA
+                </pre>
+            </fieldset>
+            <p>などのフォルダからご自身のセーブデータを探し出し、「将星録フォルダ」へとコピーしてください。</p>
+        </li>
+        <li>編集対象は、このコピーしたファイルとなります。<br>
+            編集した後は、元のフォルダのものを上書きしいてください。<br>
+        </li>
+    </ul>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+    <h3>古いゲームなどでセーブデータの位置が変更してしまっているものはハードリンクを使うと便利</h3>
+    <p>ファイルをハードリンクさせると、異なる２つのフォルダに存在するファイルを<br>
+        １つの実体とみなせるため、便利です。<br>
+        (いちいちコピーしたり戻したりといった手間がなくなります)<br>
+        ハードリンクについては、</p>
+    <fieldset class="code">
+        <legend>コンソールコマンド</legend>
+        <pre class="brush:powershell;">
+mklink /H ******
+                </pre>
+    </fieldset>
+    <p>といったコマンドとなります。</p>
+</div>
