@@ -14,6 +14,8 @@ $content_hash = [
 
 
 $filetime_hash = [
+    'nobu_mod_img_kahou' =>
+        './cnt_kahou/ITEMDATA.zip',
     'nobu_tool_movie_2x_convert' =>
         './cnt_movie/TsMovie2xConverter.zip',
     'nobu_mod_the_testsiningchange' =>
