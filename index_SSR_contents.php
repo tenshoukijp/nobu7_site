@@ -23,7 +23,7 @@ $filetime_hash = [
     'nobu_mod_img_kahou' =>
         './cnt_kahou/ITEMDATA.zip',
     'nobu_mod_tool_savedata_softlink' =>
-        './cnt_savedat_editor/MakeSavedatSoftlink.zip',
+        './cnt_savedat_softlink/MakeSavedatSoftlink.zip',
     'nobu_tool_movie_2x_convert' =>
         './cnt_movie/TsMovie2xConverter.zip'
 ];

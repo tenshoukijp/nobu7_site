@@ -1,12 +1,12 @@
 <div class="content-box mb-3 content-lighten">
-    <h2><i class="fa fa-save fa-fw"></i>セーブデータのソフトリンク</h2>
+    <h2><i class="fa fa-link fa-fw"></i>セーブデータのソフトリンク</h2>
 </div>
 
 <div class="content-box mb-3 content-lighten">
     <h3>セーブデータのソフトリンクの勧め</h3>
-    <p>上記セーブデータをコピーしたり戻したりといった作業は煩わしいものです。<br>
-    要は「C:\Users\%USERNAME%\Documents\*****\****」など深いフォルダにあるセーブデータが、<br>
-    あたかも<mark>「将星録フォルダ」にも存在するかのようにPCに認識</mark>させればよいのです。</p>
+    <p>セーブデータをコピーしたり戻したりといった作業は煩わしいものです。<br>
+        要は「C:\Users\%USERNAME%\Documents\*****\****」など深いフォルダにあるセーブデータが、<br>
+        あたかも<mark>「将星録フォルダ」にも存在するかのようにPCに認識</mark>させればよいのです。</p>
 </div>
 <div class="content-box mb-3 content-lighten">
     <h3>ダウンロード</h3>
@@ -17,7 +17,6 @@
                 <div class="col-12"><small>更新日 %(year)04d/%(mon)02d/%(mday)02d</small></div>
             </div>
             <a href="%(file)s" class="btn btn-primary"><i class="fa fa-download fa-fw"></i>MakeSavedatSoftlink.zip</a>
-            <p>該当ページの一番下部にてダウンロード可能です。</p>
         </div>
     </div>
 </div>
@@ -32,23 +31,22 @@
 <div class="content-box mb-3 content-lighten">
     <h3>使用方法</h3>
     <ul>
-        <li>MakeSavedatSoftlink.zipを解凍し、MakeSavedatSoftlink.bat を「将星録」フォルダに入れる。</li>
-    </ul>
-    <p>１つ以上セーブデータが存在する状態で、MakeSavedatSoftlink.bat ファイルを実行すると、<br>
-    セーブデータのソフトリインクが「将星録フォルダ」に作成されます。<br>
-    </p>
-    <p><img src="./cnt_savedat_softlink/cnt_savedat_softlink_01.png"></p>
-    <p>先述の「セーブデータエディタ」は、このソフトリンクがあれば、「将星録フォルダにセーブデータが存在する」と認識します。<br>
-    そして実際に「セーブデータエディタ」が保存した際には、</p>
-    <div class="code">
-        <pre class="brush:powershell;">
+        <li><p>MakeSavedatSoftlink.zipを解凍し、MakeSavedatSoftlink.bat を「将星録」フォルダに入れる。</p></li>
+        <li><p>１つ以上セーブデータが存在する状態で、MakeSavedatSoftlink.bat ファイルを実行すると、<br>
+            セーブデータのソフトリインクが「将星録フォルダ内」に作成されます。</p></li>
+        <p><img src="./cnt_savedat_softlink/cnt_savedat_softlink_01.png"></p>
+        <li>
+            <p>先述の「セーブデータエディタ」は、この「ソフトリンク」があれば、<br>
+                あたかも「将星録フォルダ内にセーブデータが存在する」と認識します。<br>
+                そして実際に「セーブデータエディタ」で保存した際には、</p>
+            <div class="code">
+                <pre class="brush:powershell;">
 C:\Users\%USERNAME%\Documents\Koei\35th\信長の野望・将星録 with パワーアップキット
-        </pre>
-    </div>
-    <p>内のセーブデータが更新されます。</p>
+                </pre>
+            </div>
+            <p>内のセーブデータが更新されます。</p>
+        </li>
+    </ul>
+
 
 </div>
-
-
-
-
