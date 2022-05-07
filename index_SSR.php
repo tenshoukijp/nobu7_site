@@ -8,7 +8,7 @@ $orgParamPage = $_GET['page'];
 
 // デフォルトのページ
 if ( $urlParamPage == "" ) {
-    $urlParamPage = "nobu_tool_ts_home";
+    $urlParamPage = "nobu_ssr_home";
 }
 
 if (! array_key_exists($urlParamPage, $content_hash) ) {
