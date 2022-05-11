@@ -1,6 +1,6 @@
 <div class="content-box mb-3 content-lighten">
   <h2><i class="fa fa-ts95 fa-fw"></i>将星録.jp の目次</h2>
-  <p>当サイトでは「<b>将星録 (Steam版)</b>」に関するコンテンツ・改造ツールを提供しています。<br>その中でも主なトピックは以下のものとなります。<br></p>
+  <p>当サイトでは「<b>将星録 with PK for Windows95</b>」に関するコンテンツ・改造ツールを提供しています。<br>その中でも主なトピックは以下のものとなります。<br></p>
 </div>
 
 <div class="content-box content-lighten">
@@ -20,24 +20,24 @@
     </div>
     <!-- カード02 -->
     <div class="card">
-      <a href="?page=nobu_mod_img_kahou"><img class="card-img-top" src="./cnt_top_index/index_mod_img_kahou.png"></a>
+      <a href="?page=nobu_kahou"><img class="card-img-top" src="./cnt_top_index/index_mod_img_kahou.png"></a>
       <div class="card-body">
         <h4 class="card-title">フルカラー家宝キット</h4>
         <p class="card-text">フルカラーの家宝グラへと差し替えるためのキット。</p>
       </div>
       <div class="card-footer text-right">
-        <a href="?page=nobu_mod_img_kahou" class="card-link"><i class="fa fa-arrow-right fa-fw"></i>もっと見る</a>
+        <a href="?page=nobu_kahou" class="card-link"><i class="fa fa-arrow-right fa-fw"></i>もっと見る</a>
       </div>
     </div>
     <!-- カード03 -->
     <div class="card">
-      <a href="?page=nobu_mod_the_mapobgk"><img class="card-img-top" src="./cnt_top_index/index_empty.png"></a>
+      <a href="?page=nobu_mod_the_mapobgk"><img class="card-img-top" src="./cnt_top_index/dunmmy"></a>
       <div class="card-body">
-        <h4 class="card-title">予備</h4>
-        <p class="card-text">予備</p>
+        <h4 class="card-title">予備地区</h4>
+        <p class="card-text">予備地区</p>
       </div>
       <div class="card-footer text-right">
-        <a href="?page=#" class="card-link"><i class="fa fa-arrow-right fa-fw"></i>もっと見る</a>
+        <a href="?page=nobu_mod_the_mapobgk" class="card-link"><i class="fa fa-arrow-right fa-fw"></i>もっと見る</a>
       </div>
     </div>
   </div>
