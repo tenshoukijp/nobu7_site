@@ -3,6 +3,9 @@ $content_hash = [
 	'401' =>
         [ 'html'=>'401.html', 'title'=>'ホーム' , 'dir'=>''],
 
+    'nobu_ssr_home' =>
+        [ 'html'=>'nobu_ssr_home.html', 'title'=>'トップページ' , 'dir'=>''],
+
     'nobu_mod_img_face' =>
         [ 'html'=>'nobu_mod_img_face.html', 'title'=>'顔グラ' , 'dir'=>''],
     'nobu_mod_img_kahou' =>
