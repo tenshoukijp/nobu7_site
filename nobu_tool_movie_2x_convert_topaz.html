@@ -1,6 +1,6 @@
 %(hilight)s
 <div class="content-box mb-3 content-lighten">
-    <h2><i class="fa fa-film fa-fw"></i>将星録のムービーを綺麗に２倍にする (Topaz編)</h2>
+    <h2><i class="fa fa-film fa-fw"></i>将星録のムービーをすごく綺麗に２倍にする (Topaz編)</h2>
 </div>
 
 <div class="content-box mb-3 content-lighten">
@@ -67,9 +67,14 @@ while (&lt;*.mp4&gt;) {
 </div>
 
 <div class="content-box mb-3 content-lighten">
-    <h3>以上で映像と音声が揃うので、TMpegEncで連結する</h3>
-    <p><a href="?page=nobu_tool_movie_2x_convert">前節のTMpegEnc</a> と同じやり方となります。<br>
-        TMpegEncの映像部としてAVIを、音声部として.WAVを読み込み、出力方法も前節と同じようにすれば、<br>
-        将星録で再生されうるフォーマットとなります。<br>
+    <h3>以上で映像と音声が揃うので、TMpegEncで連結しつつ、将星録で再生可能なように正規化する</h3>
+    <p>単純にffmpegでコンソールにて単純に映像と音声を連結するだけでは、<br>
+        20年前のアプリ基準でのヘッダファイルとしては適切ではないため、<br>
+    正規化する必要があります。</p>
+    <p><a href="https://天翔記.jp/?page=nobu_movie_convert">天翔記で利用可能な.AVIフォーマットへの変換方法</a> と同じやり方となります。<br>
+        映像のサイズは640x480そのままとなります。<br>
+        「映像ソース」には「.avi」、「音声ソース」には「.wav」を指定しましょう。<br>
+        音声ファイルの出力時の周波数は「<mark>44100 Hz</mark>で良いでしょう。
+        将星録で再生出来るフォーマットとなります。<br>
     </p>
 </div>
