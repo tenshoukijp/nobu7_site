@@ -1,0 +1,75 @@
+%(hilight)s
+<div class="content-box mb-3 content-lighten">
+    <h2><i class="fa fa-film fa-fw"></i>将星録のムービーを綺麗に２倍にする (Topaz編)</h2>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+    <h3>概要</h3>
+    <p><a href="?page=nobu_tool_movie_2x_convert">全節</a>はwaifu-2x-cafeeにより２倍よりもさらに非常に美しく２倍にしましたが、<br>
+        非常に時間がかかる上、効果も微妙に感じたかたも居られると思います。</p>
+    <p>有料ツールとはなりますが、「Topaz Video Enhance AI」を利用するとムービーをとても美しく２倍に出来ます。</p>
+    <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_02.png"><br></p>
+    <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_05.png"><br></p>
+    <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_06.png"><br></p>
+    <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_03.png"><br></p>
+    <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_04.png"><br></p>
+  </div>
+<div class="content-box mb-3 content-lighten">
+    <h3>Topaz Video Enhance AI でのオプション構成</h3>
+    <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_01.png"><br>
+    </p>
+    <p>これにより上手く修復され、２倍化された「mp4」が出来上がります。</p>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+<h3>MP4では将星録では再生できないので変換が必要</h3>
+<ul>
+<li>元のファイルから音声部分のファイル</li>
+<li>Topazで変換した映像部分のファイル</li>
+</ul>
+<p>この２つを結合して１つにします。</p>
+</div>
+
+</div>
+
+<div class="content-box mb-3 content-lighten">
+    <h3>元々のaviから音声をそのまま抽出する</h3>
+    <fieldset class="code">
+        <legend>Perlでの例。実際にはどんな言語やバッチでも良い</legend>
+        <pre class="brush:perl">
+while (&lt;*.avi&gt;) {
+    $orgfile = $_;
+    $newfile = $_;
+    $newfile =~ s/\.avi/\.wav/;
+
+	# ムービーから音声部分をコピーする。再エンコードはしない
+	`ffmpeg -vn -i &quot;$orgfile&quot; -acodec copy &quot;$newfile&quot;`;
+}
+    </pre>
+    </fieldset>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+    <h3>Topazで作ったmp4をaviにする (TMpegEncで扱えるようにするため)</h3>
+    <fieldset class="code">
+        <legend>Perlでの例。実際にはどんな言語やバッチでも良い</legend>
+        <pre class="brush:perl">
+while (&lt;*.mp4&gt;) {
+    $orgfile = $_;
+    $newfile = $_;
+    $newfile =~ s/\.mp4/\.avi/;
+
+    # ムービーから映像部分をコピーする。再エンコードはしない。コンテナだけAVIにする。
+    `ffmpeg -i &quot;$orgfile&quot; -r 15 -vcodec copy &quot;$newfile&quot;`;
+}
+    </pre>
+    </fieldset>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+    <h3>以上で映像と音声が揃うので、TMpegEncで連結する</h3>
+    <p><a href="?page=nobu_tool_movie_2x_convert">前節のTMpegEnc</a> と同じやり方となります。<br>
+        TMpegEncの映像部としてAVIを、音声部として.WAVを読み込み、出力方法も前節と同じようにすれば、<br>
+        将星録で再生されうるフォーマットとなります。<br>
+    </p>
+</div>

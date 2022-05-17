@@ -16,6 +16,8 @@ $content_hash = [
         [ 'html'=>'nobu_mod_tool_savedata_softlink.html', 'title'=>'セーブデータエディタ' , 'dir'=>''],
     'nobu_data_bushoulist' =>
         [ 'html'=>'nobu_data_bushoulist.html', 'title'=>'武将一覧' , 'dir'=>''],
+    'nobu_tool_movie_2x_convert_topaz' =>
+        [ 'html'=>'nobu_tool_movie_2x_convert_topaz.html', 'title'=>'ムービーの２倍化' , 'dir'=>''],
     'nobu_tool_movie_2x_convert' =>
         [ 'html'=>'nobu_tool_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'']
 ];
