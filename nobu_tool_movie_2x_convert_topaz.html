@@ -7,13 +7,13 @@
     <h3>概要</h3>
     <p><a href="?page=nobu_tool_movie_2x_convert">全節</a>はwaifu-2x-cafeeにより２倍にしましたが、<br>
         非常に時間がかかる上、効果も微妙に感じたかたも居られると思います。</p>
-    <p>有料ツールとはなりますが、「Topaz Video Enhance AI」を利用するとムービーをとても美しく２倍に出来ます。</p>
+    <p>有料ツールとはなりますが、「Topaz Video Enhance AI」を利用するとムービーを美しく２倍に出来ます。</p>
     <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_02.png"><br></p>
     <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_05.png"><br></p>
     <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_06.png"><br></p>
     <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_03.png"><br></p>
     <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_04.png"><br></p>
-  </div>
+</div>
 <div class="content-box mb-3 content-lighten">
     <h3>Topaz Video Enhance AI でのオプション構成</h3>
     <p><img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_topaz_01.png"><br>
@@ -22,12 +22,12 @@
 </div>
 
 <div class="content-box mb-3 content-lighten">
-<h3>MP4では将星録では再生できないので変換が必要</h3>
-<ul>
-<li>元のファイルから音声部分のファイル</li>
-<li>Topazで変換した映像部分のファイル</li>
-</ul>
-<p>この２つを結合して１つにします。</p>
+    <h3>MP4では将星録では再生できないので変換が必要</h3>
+    <ul>
+        <li>元のファイルから音声部分のファイル</li>
+        <li>Topazで変換した映像部分のファイル</li>
+    </ul>
+    <p>この２つを結合して１つにします。</p>
 </div>
 
 </div>
@@ -70,11 +70,13 @@ while (&lt;*.mp4&gt;) {
     <h3>以上で映像と音声が揃うので、TMpegEncで連結しつつ、将星録で再生可能なように正規化する</h3>
     <p>単純にffmpegでコンソールにて単純に映像と音声を連結するだけでは、<br>
         20年前のアプリ基準でのヘッダファイルとしては適切ではないため、<br>
-    正規化する必要があります。</p>
-    <p><a href="https://天翔記.jp/?page=nobu_movie_convert">天翔記で利用可能な.AVIフォーマットへの変換方法</a> と同じやり方となります。<br>
-        映像のサイズは640x480そのままとなります。<br>
-        「映像ソース」には「.avi」、「音声ソース」には「.wav」を指定しましょう。<br>
-        音声ファイルの出力時の周波数は「<mark>44100 Hz</mark>」で良いでしょう。
-        将星録で再生出来るフォーマットとなります。<br>
+        正規化する必要があります。</p>
+    <p><a href="https://天翔記.jp/?page=nobu_movie_convert">天翔記で利用可能な.AVIフォーマットへの変換方法</a> と同じやり方となります。<br></p>
+    <ul>
+        <li>映像のサイズは640x480そのままとなります。</li>
+        <li>「映像ソース」には「.avi」、「音声ソース」には「.wav」を指定しましょう。<br></li>
+        <li>音声ファイルの出力時の周波数は「<mark>44100 Hz</mark>」で良いでしょう。</li>
+    </ul>
+    <p>将星録で再生出来るフォーマットとなります。<br>
     </p>
 </div>
