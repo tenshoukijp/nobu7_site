@@ -14,6 +14,8 @@ $content_hash = [
         [ 'html'=>'nobu_mod_tool_savedata_editor.html', 'title'=>'セーブデータエディタ' , 'dir'=>''],
     'nobu_mod_tool_savedata_softlink' =>
         [ 'html'=>'nobu_mod_tool_savedata_softlink.html', 'title'=>'セーブデータエディタ' , 'dir'=>''],
+    'nobu_mod_tool_retsuden_editor' =>
+        [ 'html'=>'nobu_mod_tool_retsuden_editor.html', 'title'=>'列伝エディタ' , 'dir'=>''],
     'nobu_data_bushoulist' =>
         [ 'html'=>'nobu_data_bushoulist.html', 'title'=>'武将一覧' , 'dir'=>''],
     'nobu_tool_movie_2x_convert_topaz' =>
@@ -31,6 +33,8 @@ $filetime_hash = [
         './cnt_kahou/ITEMDATA.zip',
     'nobu_mod_tool_savedata_softlink' =>
         './cnt_savedat_softlink/MakeSavedatSoftlink.zip',
+    'nobu_mod_tool_retsuden_editor' =>
+        './cnt_retsuden_editor/RetsudenEditor.zip',
     'nobu_data_bushoulist' =>
         './cnt_bushou/武将一覧.zip',
     'nobu_tool_movie_2x_convert' =>
