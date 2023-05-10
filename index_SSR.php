@@ -2,8 +2,12 @@
 
 require( "index_SSR_contents.php" );
 
-$urlParamPage = $_GET['page'];
-$orgParamPage = $_GET['page'];
+function getQueryParam($query_name) {
+	return filter_input(INPUT_GET, $query_name);
+}
+
+$urlParamPage = getQueryParam('page');
+$orgParamPage = getQueryParam('page');
 
 
 // デフォルトのページ
@@ -16,7 +20,7 @@ if (! array_key_exists($urlParamPage, $content_hash) ) {
 }
 
 // リダイレクト
-if ($content_hash[$urlParamPage]['301']) {
+if (isset($content_hash[$urlParamPage]['301'])) {
     header( "HTTP/1.1 301 Moved Permanently" );
     header( "Location: https://xn--petw8uc11b.jp/?page=" . $urlParamPage );
     exit;
@@ -147,7 +151,10 @@ $strPageTemplate = str_replace("%(mathjax)s", $strMathJaxJS, $strPageTemplate);
 
 
 // ファイルのアーカイブがあれば、更新日時へと置き換え
-$fileArchieve = $filetime_hash[$urlParamPage];
+$fileArchieve = "";
+if (isset($filetime_hash[$urlParamPage])) {
+    $fileArchieve = $filetime_hash[$urlParamPage];
+}
 if ($fileArchieve) {
     $filetime = filemtime($fileArchieve);
     $fileKeys   = array( "%(file)s", "%(year)04d", "%(mon)02d", "%(mday)02d" );
@@ -161,10 +168,7 @@ if ($fileArchieve) {
 $strStyleTemplate = file_get_contents("style_dynamic.css");
 
 $normalizeUrlParamPage = $urlParamPage; // 普通のページならそのまま?page=○○○ の部分へと置き換える
-// 顔系の特殊なやつは
-if ($_GET['gung'] && $_GET['tdir']) {
-  $normalizeUrlParamPage = $urlParamPage . "_" . "gung_".$_GET['gung'] . "_tdir_" . $_GET['tdir'];
-}
+
 // 今表示しているページへの太字等
 $strStyleTemplate = str_replace("%(menu_style_dynamic)s", $normalizeUrlParamPage, $strStyleTemplate);
 
