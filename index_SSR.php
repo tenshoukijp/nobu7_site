@@ -92,6 +92,8 @@ $strPageTemplate = str_replace($vsr_array_style, $vsarray_template, $strPageTemp
 $strShCoreHeader = "";
 $strShCoreFooter = "";
 
+$strShcoreCSSUpdate = "";
+
 // このbrush:があれば、シンタックスハイライトする必要があるページ。上部と下部に必要なCSSやJSを足しこむ
 if ( strpos($strPageTemplate, "brush:") != false ) {
     $strShCoreHeader = '<link rel="stylesheet" type="text/css" href="./hilight/styles/shcore-3.0.83.min.css?v=%(shcorecssupdate)s">' ;
