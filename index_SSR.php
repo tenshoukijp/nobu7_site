@@ -19,12 +19,6 @@ if (! array_key_exists($urlParamPage, $content_hash) ) {
     $urlParamPage = "401";
 }
 
-// リダイレクト
-if (isset($content_hash[$urlParamPage]['301'])) {
-    header( "HTTP/1.1 301 Moved Permanently" );
-    header( "Location: https://xn--petw8uc11b.jp/?page=" . $urlParamPage );
-    exit;
-}
 if ($_SERVER['HTTP_HOST']=="usr.s602.xrea.com") {
     if (str_contains($_SERVER["REQUEST_URI"], "/xn--petw8uc11b.jp")) {
         $OldRequest = $_SERVER["REQUEST_URI"];
