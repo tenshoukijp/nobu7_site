@@ -18,9 +18,11 @@ $content_hash = [
         [ 'html'=>'nobu_mod_tool_retsuden_editor.html', 'title'=>'列伝エディタ' , 'dir'=>''],
     'nobu_data_bushoulist' =>
         [ 'html'=>'nobu_data_bushoulist.html', 'title'=>'武将一覧' , 'dir'=>''],
+    'nobu_data_movie_2x_convert' =>
+        [ 'html'=>'nobu_data_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替'],
     'nobu_tool_movie_2x_convert_topaz' =>
         [ 'html'=>'nobu_tool_movie_2x_convert_topaz.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替'],
-    'nobu_tool_movie_2x_convert' =>
+    'nobu__movie_2x_convert' =>
         [ 'html'=>'nobu_tool_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替']
 ];
 
