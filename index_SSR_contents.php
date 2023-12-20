@@ -6,6 +6,8 @@ $content_hash = [
     'nobu_ssr_home' =>
         [ 'html'=>'nobu_ssr_home.html', 'title'=>'トップページ' , 'dir'=>''],
 
+    'nobu_mod_bgm_noplay_issue' =>
+        [ 'html'=>'nobu_mod_bgm_noplay_issue.html', 'title'=>'BGM問題' , 'dir'=>''],
     'nobu_mod_img_face' =>
         [ 'html'=>'nobu_mod_img_face.html', 'title'=>'顔グラ' , 'dir'=>''],
     'nobu_mod_img_kahou' =>
@@ -29,6 +31,8 @@ $content_hash = [
 
 
 $filetime_hash = [
+    'nobu_mod_bgm_noplay_issue' =>
+        './cnt_mod/dsound.zip',
     'nobu_mod_img_face' =>
         './cnt_face/KAODATA.zip',
     'nobu_mod_img_kahou' =>
