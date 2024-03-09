@@ -24,69 +24,19 @@
 <div class="content-box mb-3 content-lighten">
     <h3>MP4では将星録では再生できないので変換が必要</h3>
     <ul>
-        <li>元のファイルから音声部分のファイル</li>
+        <li>元のファイルから音声部分のファイル<br>
+        (ffmpeg 等を利用して、音声部分だけ抽出)<br>
+        <blockquote>ffmpeg -vn -i input.mov -acodec copy output.wav</blockquote>
+    </li>
         <li>Topazで変換した映像部分のファイル</li>
     </ul>
-    <p>この２つを結合して１つにします。</p>
-</div>
-
-</div>
-
-<div class="content-box mb-3 content-lighten">
-    <h3>元々のaviから音声をそのまま抽出する</h3>
-    <fieldset class="code">
-        <legend>Perlでの例。実際にはどんな言語やバッチでも良い</legend>
-        <pre class="brush:perl">
-while (&lt;*.avi&gt;) {
-    $orgfile = $_;
-    $newfile = $_;
-    $newfile =~ s/\.avi/\.wav/;
-
-	# ムービーから音声部分をコピーする。再エンコードはしない
-	`ffmpeg -vn -i &quot;$orgfile&quot; -acodec copy &quot;$newfile&quot;`;
-}
-    </pre>
-    </fieldset>
+    <p>この２つをffmpegで結合して１つにします。<br>
+    具体的には下記を参考にしてください。</p>
 </div>
 
 <div class="content-box mb-3 content-lighten">
-    <h3>Topazで作ったmp4をaviにする (TMpegEncで扱えるようにするため)</h3>
-    <fieldset class="code">
-        <legend>Perlでの例。実際にはどんな言語やバッチでも良い</legend>
-        <pre class="brush:perl">
-while (&lt;*.mp4&gt;) {
-    $orgfile = $_;
-    $newfile = $_;
-    $newfile =~ s/\.mp4/\.avi/;
-
-    # ムービーから映像部分をコピーする。再エンコードはしない。コンテナだけAVIにする。
-    `ffmpeg -i &quot;$orgfile&quot; -r 15 -vcodec copy &quot;$newfile&quot;`;
-}
-    </pre>
-    </fieldset>
-</div>
-
-<div class="content-box mb-3 content-lighten">
-    <h3>以上で映像と音声が揃うので、TMpegEncで連結しつつ、将星録で再生可能なように正規化する</h3>
-    <p>単純にffmpegでコンソールにて単純に映像と音声を連結するだけでは、<br>
-        20年前のアプリ基準でのヘッダファイルとしては適切ではないため、<br>
-        正規化する必要があります。</p>
-    <p><a href="https://天翔記.jp/?page=nobu_movie_convert">天翔記で利用可能な.AVIフォーマットへの変換方法</a> と同じやり方となります。<br></p>
-    <ul>
-        <li>映像のサイズは640x480そのままとなります。</li>
-        <li>「映像ソース」には「.avi」、「音声ソース」には「.wav」を指定しましょう。<br></li>
-        <li>音声ファイルの出力時の周波数は「<mark>44100 Hz</mark>」で良いでしょう。</li>
-    </ul>
-    <p>将星録で再生出来るフォーマットとなります。<br>
-    </p>
-
-    <p>
-        <fieldset class="alert alert-warning">
-            <legend>Windowsをバージョンの大型更新をすると、Xdivの再インストールが必要</legend>
-            Xdivのcodecは、Windowsを22H2⇒22H3など、大型のバージョンアップした再には、登録しているcodec情報が一部クリアされてしまいます。<br>
-                これにより、Xdiv codecのムービーそのままだと、将星録が起動できなくなってしまいます。<br>
-                この再には、改めて、上記codecを再インストールしてください。
-        </fieldset>
+    <h3>残りはffmpegで変換すればよい</h3>
+    <p><a href="?page=nobu_data_movie_convert_method">将星録で再生可能なムービー形式にする方法</a>
+        を参考に変換してください。
     </p>
 </div>
-

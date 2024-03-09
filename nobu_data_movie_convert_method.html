@@ -1,0 +1,68 @@
+%(hilight)s
+<div class="content-box mb-3 content-lighten">
+    <h2><i class="fa fa-book fa-fw"></i>将星録で再生可能なムービー形式にする方法</h2>
+
+    <p>将星録のムービーを拡大し、それを問題なく将星録で再生できる形式にする方法を２つ紹介します。<br>
+    </p>
+
+    <h4>XVidを採用する方法</h4>
+    <p>この方法のメリットは、実はXVidが現在では主流ではないことです。<br>
+    即ち、メジャーなcodecではないがゆえに、<br>
+    他のメジャーな動画アプリや動画変換ツールに影響を与えにくい、という点です。<br>
+    将来動画関係で不具合が起きたとしても、将星録の中に問題を閉じ込めやすい点でしょう。
+    </p>
+
+    <h4>H264を採用する方法</h4>
+    <p>この方法のメリットは、H264というメジャーな方法であるという点です。<br>
+    2024年現在、H264は最も主流なエンコード方法です。<br>
+    ただし、将星録で再生するには H264のcodecを「Video for Windows」で再生できるようにする必要があり、<br>
+    将星録が古いゲームを原点としますので、<mark>H264の中でもYUV420pという互換の色形式</mark>で変換する必要があります。</p>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+    <h3>XVidを採用</h3>
+    <p>ffmpegでの変換例を示します。</p>
+    <blockquote>ffmpeg -i input.avi -c:v libxvid -qscale:v 1 -c:a copy output.avi</blockquote>
+    <p>変換ではなく、「XVid for Video for Windows」とでもいうべき「Video for Windows というAPIでの再生」のために、以下のものが必要です。</p>
+    <h4>Xvid (コーデック)</h4>
+    <div class="card mb-3 ml-3" style="max-width: 30rem;">
+        <!-- カード本文：card-body -->
+        <div class="card-body text-center">
+            <div class="row">
+                <div class="col-12"><small>(ダウンロード場所)</small></div>
+            </div>
+            <a href="https://www.xvid.com/download/" class="btn btn-primary"><i class="fa fa-download fa-fw"></i>Xvid for Windows</a>
+        </div>
+    </div>
+    <p>をインストールすれば、将星録でXVid形式のムービーが再生可能となります。</p>
+
+    <p>
+        <fieldset class="alert alert-warning">
+            <legend>Windowsをバージョンの大型更新をすると、Xdivの再インストールが必要</legend>
+            Xdivのcodecは、Windowsを22H2⇒22H3など、大型のバージョンアップした再には、登録しているcodec情報が一部クリアされてしまいます。<br>
+                これにより、Xdiv codecのムービーそのままだと、将星録が起動できなくなってしまいます。<br>
+                この再には、改めて、上記codecを再インストールしてください。
+        </fieldset>
+    </p>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+    <h3>H264を採用</h3>
+    <p>ffmpegでの変換例を示します。<br>
+    「<mark>-pix_fmt yuv420p</mark>」は必須となります。これが無いと古いVideo for Windowsの形式との互換が保てません。</p>
+    <blockquote>ffmpeg -i input.avi -c:v libx264 -preset slow -crf 1 -qp 0 -c:a copy -pix_fmt yuv420p output.avi</blockquote>
+    <p>変換ではなく、「H264 for Video for Windows」とでもいうべき「Video for Windows というAPIでの再生」のために、以下のものが必要です。</p>
+    <h4>x264vfw (コーデック)</h4>
+    <div class="card mb-3 ml-3" style="max-width: 30rem;">
+        <!-- カード本文：card-body -->
+        <div class="card-body text-center">
+            <div class="row">
+                <div class="col-12"><small>(ダウンロード場所)</small></div>
+            </div>
+            <a href="https://sourceforge.net/projects/x264vfw/" class="btn btn-primary"><i class="fa fa-download fa-fw"></i>x264vfw</a>
+        </div>
+    </div>
+    <p>緑の「ダウンロード」を押して、ダウンロードし、インストールすれば、将星録でXVid形式のムービーが再生可能となります。</p>
+    </p>
+</div>
+

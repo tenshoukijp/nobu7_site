@@ -26,6 +26,8 @@ $content_hash = [
         [ 'html'=>'nobu_tool_movie_2x_convert_topaz.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替'],
     'nobu_mod_windows_update_issue' =>
         [ 'html'=>'nobu_mod_windows_update_issue.html', 'title'=>'Windows Update' , 'dir'=>''],
+    'nobu_data_movie_convert_method' =>
+        [ 'html'=>'nobu_data_movie_convert_method.html', 'title'=>'ムービーの変換' , 'dir'=>'映像入替'],
     'nobu__movie_2x_convert' =>
         [ 'html'=>'nobu_tool_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替']
 ];
