@@ -20,6 +20,35 @@ $content_hash = [
         [ 'html'=>'nobu_mod_tool_retsuden_editor.html', 'title'=>'列伝エディタ' , 'dir'=>''],
     'nobu_data_bushoulist' =>
         [ 'html'=>'nobu_data_bushoulist.html', 'title'=>'武将一覧' , 'dir'=>''],
+
+    'nobu_mod_environment' =>
+        [ 'html'=>'nobu_mod_environment.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
+
+    'nobu_mod_modupdater' =>
+        [ 'html'=>'nobu_mod_modupdater.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
+
+    'nobu_mod_base_mod_override' =>
+        [ 'html'=>'nobu_mod_base_mod_override.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
+
+    'nobu_mod_base_mod_whats_override' =>
+        [ 'html'=>'nobu_mod_base_mod_whats_override.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
+
+    'nobu_mod_base_mod_override_bushou_pic' =>
+        [ 'html'=>'nobu_mod_base_mod_override_bushou_pic.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
+
+    'nobu_mod_base_mod_override_kahou_pic' =>
+        [ 'html'=>'nobu_mod_base_mod_override_kahou_pic.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
+
+    'nobu_mod_base_mod_override_bgm' =>
+        [ 'html'=>'nobu_mod_base_mod_override_bgm.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
+
+    'nobu_mod_base_mod_override_se' =>
+        [ 'html'=>'nobu_mod_base_mod_override_se.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
+
+    'nobu_mod_base_mod_override_movie' =>
+        [ 'html'=>'nobu_mod_base_mod_override_movie.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
+
+
     'nobu_data_movie_2x_convert' =>
         [ 'html'=>'nobu_data_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替'],
     'nobu_tool_movie_2x_convert_topaz' =>
@@ -28,7 +57,7 @@ $content_hash = [
         [ 'html'=>'nobu_mod_windows_update_issue.html', 'title'=>'Windows Update' , 'dir'=>''],
     'nobu_data_movie_convert_method' =>
         [ 'html'=>'nobu_data_movie_convert_method.html', 'title'=>'ムービーの変換' , 'dir'=>'映像入替'],
-    'nobu__movie_2x_convert' =>
+    'nobu_movie_2x_convert' =>
         [ 'html'=>'nobu_tool_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替']
 ];
 
@@ -47,6 +76,8 @@ $filetime_hash = [
         './cnt_retsuden_editor/RetsudenEditor.zip',
     'nobu_data_bushoulist' =>
         './cnt_bushou/武将一覧.zip',
+    'nobu_mod_modupdater' =>
+        './cnt_mod/n7mod.zip',
     'nobu_tool_movie_2x_convert' =>
         './cnt_movie/TsMovie2xConverter.zip'
 ];

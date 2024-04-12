@@ -1,0 +1,64 @@
+<div class="content-box mb-3 content-lighten">
+    <h2><i class="fa fa-download fa-fw"></i>Modのダウンロード</h2>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+    <h3>動作環境</h3>
+    <ul>
+        <li>Windows 10 以上<br>
+            (管理人の動作確認は Windows 11 のみ)</li>
+        <li>.NET Framework 4.8以上<br>
+            (わざわざ Windows Update を止めていない限り、.NET Framework 4.8.1が入っているハズです)</li>
+    </ul>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+    <h3>ダウンロード</h3>
+    <div class="content-box">
+        <div class="row">
+            <div class="card mb-3 ml-3" style="max-width: 30rem;">
+                <div class="card-body text-center">
+                    <div class="row">
+                        <div class="col-12"><small>更新日 %(year)04d/%(mon)02d/%(mday)02d</small></div>
+                    </div>
+                    <a href="%(file)s" class="btn btn-primary"><i class="fa fa-download fa-fw"></i>将星録.mod</a>
+                </div>
+            </div>
+        </div>
+        <h4>ダウンロードがChromeやMicrosoft Defenderでブロックされてしまう場合</h4>
+            <p>
+            以下のような「download.bat」といったファイルを適当なフォルダに作成し、ダウンロードしてください。<br>
+                curl経由となるため、<mark>ブロックされにくい</mark>ハズです。<br>
+            </p>
+            <fieldset class="code alert"><legend>download.bat</legend><pre class="brush:ps;">
+            set url=https://xn--petw8uc11b.jp/cnt_mod/n7mod.zip
+            set output=n7mod.zip
+            curl -o %output% %url%
+            </pre></fieldset>
+        <p>(作成したフォルダにn7mod.zipというファイル名でダウンロードされます)</p>
+        <fieldset class="alert alert-info">
+            <legend>ダウンロードした後、<mark>解凍する前</mark>に、zipを「ブロック解除(or 許可する)」必須</legend>
+            <p>zipを解凍する際には、「プロパティ」から「ブロック解除(or 許可する)」してください。<br>
+                「プロパティ」に「ブロック解除(or 許可する)」といった項目が無いようならこの作業は不要です。</p>
+            <p><img src="./cnt_mod/cnt_mod_init_05.png"></p>
+        </fieldset>
+    </div>
+</div>
+
+
+<div class="content-box mb-3 content-lighten">
+    <h3>将星録ゲームのフォルダーへファイル群をコピー</h3>
+    <p>ゲーム本体のファイルが上書きされたりはしません。<br>
+    (ゲーム本体のファイル名とは被っていない)</p>
+    <p><img src="./cnt_mod/cnt_mod_init_06.png"></p>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+    <h3>Microsoft VC++ 再頒布可能パッケージをインストール</h3>
+    <p>
+        <a href="%(vs2022runtime)s">Visual Studio 2022 C++ ランタイム</a><br>
+        x86版をインストールしたことが無い方はインストールしてください。<br>
+        <span class="negative">お手持ちのOSが64bitか32bitかには関わりなく、x86版のインストールが必要です。</span>
+    </p>
+    <p>以上で終了です。</p>
+</div>
