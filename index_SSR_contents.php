@@ -20,35 +20,28 @@ $content_hash = [
         [ 'html'=>'nobu_mod_tool_retsuden_editor.html', 'title'=>'列伝エディタ' , 'dir'=>''],
     'nobu_data_bushoulist' =>
         [ 'html'=>'nobu_data_bushoulist.html', 'title'=>'武将一覧' , 'dir'=>''],
-
     'nobu_mod_environment' =>
         [ 'html'=>'nobu_mod_environment.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
-
     'nobu_mod_modupdater' =>
         [ 'html'=>'nobu_mod_modupdater.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
-
     'nobu_mod_base_mod_override' =>
         [ 'html'=>'nobu_mod_base_mod_override.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
-
     'nobu_mod_base_mod_whats_override' =>
         [ 'html'=>'nobu_mod_base_mod_whats_override.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
-
     'nobu_mod_base_mod_override_bushou_pic' =>
         [ 'html'=>'nobu_mod_base_mod_override_bushou_pic.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
-
     'nobu_mod_base_mod_override_kahou_pic' =>
         [ 'html'=>'nobu_mod_base_mod_override_kahou_pic.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
-
     'nobu_mod_base_mod_override_bgm' =>
         [ 'html'=>'nobu_mod_base_mod_override_bgm.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
-
     'nobu_mod_base_mod_override_se' =>
         [ 'html'=>'nobu_mod_base_mod_override_se.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
-
     'nobu_mod_base_mod_override_movie' =>
         [ 'html'=>'nobu_mod_base_mod_override_movie.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
-
-
+    'nobu_mod_base_mod_memory_editor' =>
+        [ 'html'=>'nobu_mod_base_mod_memory_editor.html', 'title'=>'将星録.mod' , 'dir'=>'メモリエディタ'],
+    'nobu_mod_custom_mod' =>
+        [ 'html'=>'nobu_mod_custom_mod.html', 'title'=>'将星録.mod' , 'dir'=>'カスタムMod'],
     'nobu_data_movie_2x_convert' =>
         [ 'html'=>'nobu_data_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替'],
     'nobu_tool_movie_2x_convert_topaz' =>
@@ -78,6 +71,10 @@ $filetime_hash = [
         './cnt_bushou/武将一覧.zip',
     'nobu_mod_modupdater' =>
         './cnt_mod/n7mod.zip',
+    'nobu_mod_custom_mod' =>
+        './cnt_mod/n7mod_custom.zip',
+    'nobu_mod_base_mod_override_kahou_pic' =>
+        './cnt_kahou/ITEMDATA_CUSTOM.zip',
     'nobu_tool_movie_2x_convert' =>
         './cnt_movie/TsMovie2xConverter.zip'
 ];
