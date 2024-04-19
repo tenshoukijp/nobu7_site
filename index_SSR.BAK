@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--nobanner-->
+<html lang="ja">
+<head>
+<title>将星録.jp</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- meta name=viewport content="width=device-width, initial-scale=1" -->
+<meta http-equiv="content-style-type" content="text/css">
+<meta name="description" content="将星録の改造">
+<link rel="shortcut icon" href="./favicon.ico">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css">
+<style>fieldset, legend { all: revert; }</style>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./style.min.css?v=%(styleupdate)s">
+<link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=%(fontpluginupdate)s">
+<link rel="stylesheet" type="text/css" href="./jquery/jquery.multilevelpushmenu.min.css?v=%(mlpmcssdate)s">
+%(style_dynamic)s
+%(shcore_head)s
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="sitebody">
+<div id="pushobj">
+<div id="eventpanel"></div>
+<table style="margin: 0px; padding: 0px">
+    <tr>
+        <td class="content-box" style="margin:0px;padding:0px" width="1150">
+        %(content_dynamic)s
+        </td>
+    </tr>
+</table>
+</div>
+
+<div id="menu">
+<nav>
+    <h2><i class="fa fa-reorder fa-fw"></i>目次</h2>
+    <ul>
+        <li><a href="./"><i class="fa fa-shouseiroku fa-fw"></i><span id="nobu_ssr_home">ホーム</span></a></li>
+        <li><a href="?page=nobu_mod_img_face"><i class="fa fa-image fa-fw"></i><span id="nobu_mod_img_face">フルカラー顔グラキット</span></a></li>
+        <li><a href="?page=nobu_mod_img_kahou"><i class="fa fa-image fa-fw"></i><span id="nobu_mod_img_kahou">フルカラー家宝キット</span></a></li>
+        <li><a href="?page=nobu_mod_tool_savedata_editor"><i class="fa fa-save fa-fw"></i><span id="nobu_mod_tool_savedata_editor">セーブデータエディタ</span></a></li>
+        <li><a href="?page=nobu_mod_tool_savedata_softlink"><i class="fa fa-link fa-fw"></i><span id="nobu_mod_tool_savedata_softlink">セーブデータのソフトリンク</span></a></li>
+        <li><a href="?page=nobu_mod_tool_retsuden_editor"><i class="fa fa-align-justify fa-fw"></i><span id="nobu_mod_tool_retsuden_editor">列伝エディタ</span></a></li>
+        <li><a href="?page=nobu_mod_bgm_noplay_issue"><i class="fa fa-music fa-fw"></i><span id="nobu_mod_bgm_noplay_issue">BGM再生の不具合</span></a></li>
+        <li><a href="?page=nobu_mod_windows_update_issue"><i class="fa fa-windows fa-fw"></i><span id="nobu_mod_windows_update_issue">Windowsの更新で起動しなくなった</span></a></li>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-film fa-fw"></i>映像入替</a>
+            <h2><i class="fa fa-film fa-fw"></i>映像入替</h2>
+            <ul>
+                <!-- li><a href="?page=nobu_tool_movie_2x_convert"><i class="fa fa-film fa-fw"></i><span id="nobu_tool_movie_2x_convert">ムービー解像度を綺麗に２倍にする</span></a></!-->
+                <li><a href="?page=nobu_data_movie_2x_convert"><i class="fa fa-download fa-fw"></i><span id="nobu_data_movie_2x_convert">２倍サイズにしたムービーをゲット</span></a></li>
+                <li><a href="?page=nobu_data_movie_convert_method"><i class="fa fa-book fa-fw"></i><span id="nobu_data_movie_convert_method">将星録で再生可能なムービー形式にする方法</span></a></li>
+                <li><a href="?page=nobu_tool_movie_2x_convert_topaz"><i class="fa fa-film fa-fw"></i><span id="nobu_tool_movie_2x_convert_topaz">ムービー解像度を「すごく」綺麗に２倍にする (Topaz編)</span></a></li>
+            </ul>
+        </li>
+        <li><a href="?page=nobu_data_bushoulist"><i class="fa fa-file-excel-o fa-fw"></i><span id="nobu_data_bushoulist">武将一覧</span></a></li>
+        <li>
+            <a href="#"><i class="fa fa-lightbulb-o fa-fw"></i>更新情報</a>
+            <h2><i class="fa fa-lightbulb-o fa-fw"></i>更新情報</h2>
+            <ul>
+                <li><a href="https://twitter.com/tenshouki_jp"><i class="fa fa-twitter fa-fw"></i>Twitter</a></li>
+                <li><a href="https://github.com/tenshoukijp?tab=repositories&q=nobu7"><i class="fa fa-github fa-fw"></i>GitHub</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</div>
+<script type="text/javascript" src="./jquery/jquery.multilevelpushmenu-2.1.5.min.js"></script>
+<script type="text/javascript">
+function doMenuExpand() {
+%(expand)s;
+}
+</script>
+<script type="text/javascript" src="./jquery/jquery.multilevelpushmenu.custom.min.js?v=%(mlpmcustomdate)s"></script>
+%(shcore_foot)s
+%(mathjax_foot)s
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
