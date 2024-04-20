@@ -22,6 +22,8 @@ $content_hash = [
         [ 'html'=>'nobu_data_bushoulist.html', 'title'=>'武将一覧' , 'dir'=>''],
     'nobu_mod_environment' =>
         [ 'html'=>'nobu_mod_environment.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
+    'nobu_mod_base_mod' =>
+        [ 'html'=>'nobu_mod_modupdater.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
     'nobu_mod_modupdater' =>
         [ 'html'=>'nobu_mod_modupdater.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
     'nobu_mod_base_mod_override' =>
@@ -40,8 +42,8 @@ $content_hash = [
         [ 'html'=>'nobu_mod_base_mod_override_se.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
     'nobu_mod_base_mod_override_movie' =>
         [ 'html'=>'nobu_mod_base_mod_override_movie.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
-    'nobu_mod_base_mod_memory_editor' =>
-        [ 'html'=>'nobu_mod_base_mod_memory_editor.html', 'title'=>'将星録.mod' , 'dir'=>'メモリエディタ'],
+    'nobu_mod_base_mod_whats_memoryeditor' =>
+        [ 'html'=>'nobu_mod_base_mod_whats_memoryeditor.html', 'title'=>'将星録.mod' , 'dir'=>'メモリエディタ'],
     'nobu_mod_custom_mod' =>
         [ 'html'=>'nobu_mod_custom_mod.html', 'title'=>'将星録.mod' , 'dir'=>'カスタムMod'],
     'nobu_data_movie_2x_convert' =>
@@ -71,6 +73,8 @@ $filetime_hash = [
         './cnt_retsuden_editor/RetsudenEditor.zip',
     'nobu_data_bushoulist' =>
         './cnt_bushou/武将一覧.zip',
+    'nobu_mod_base_mod' =>
+        './cnt_mod/n7mod.zip',
     'nobu_mod_modupdater' =>
         './cnt_mod/n7mod.zip',
     'nobu_mod_custom_mod' =>
