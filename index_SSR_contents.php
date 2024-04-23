@@ -22,10 +22,10 @@ $content_hash = [
         [ 'html'=>'nobu_data_bushoulist.html', 'title'=>'武将一覧' , 'dir'=>''],
     'nobu_mod_environment' =>
         [ 'html'=>'nobu_mod_environment.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
-    'nobu_mod_base_mod' =>
-        [ 'html'=>'nobu_mod_modupdater.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
     'nobu_mod_modupdater' =>
-        [ 'html'=>'nobu_mod_modupdater.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
+        [ 'html'=>'nobu_mod_base_mod.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
+    'nobu_mod_base_mod' =>
+        [ 'html'=>'nobu_mod_base_mod.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
     'nobu_mod_base_mod_override' =>
         [ 'html'=>'nobu_mod_base_mod_override.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
     'nobu_mod_base_mod_whats_override' =>
@@ -46,6 +46,10 @@ $content_hash = [
         [ 'html'=>'nobu_mod_base_mod_whats_memoryeditor.html', 'title'=>'将星録.mod' , 'dir'=>'メモリエディタ'],
     'nobu_mod_custom_mod' =>
         [ 'html'=>'nobu_mod_custom_mod.html', 'title'=>'将星録.mod' , 'dir'=>'カスタムMod'],
+    'nobu_mod_custom_mod_eventhandler_index' =>
+        [ 'html'=>'nobu_mod_custom_mod_eventhandler_index.html', 'title'=>'将星録.mod' , 'dir'=>'イベントハンドラ'],
+    'nobu_mod_tool_moddebugger' =>
+        [ 'html'=>'nobu_mod_tool_moddebugger.html', 'title'=>'将星録.mod' , 'dir'=>'カスタムMod'],
     'nobu_data_movie_2x_convert' =>
         [ 'html'=>'nobu_data_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替'],
     'nobu_tool_movie_2x_convert_topaz' =>
@@ -79,6 +83,8 @@ $filetime_hash = [
         './cnt_mod/n7mod.zip',
     'nobu_mod_custom_mod' =>
         './cnt_mod/n7mod_custom.zip',
+    'nobu_mod_tool_moddebugger' =>
+        './cnt_mod_debugger/ModDebugger.zip',
     'nobu_mod_base_mod_override_kahou_pic' =>
         './cnt_kahou/ITEMDATA_CUSTOM.zip',
     'nobu_tool_movie_2x_convert' =>
