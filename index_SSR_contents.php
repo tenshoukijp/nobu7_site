@@ -52,8 +52,8 @@ $content_hash = [
         [ 'html'=>'nobu_mod_custom_mod_eventhandler.html', 'title'=>'将星録.mod' , 'dir'=>'イベントハンドラ'],
     'nobu_mod_custom_mod_eventhandler_on_main_window_construction' =>
         [ 'html'=>'nobu_mod_custom_mod_eventhandler_on_main_window_construction.html', 'title'=>'将星録.mod' , 'dir'=>'イベントハンドラ'],
-    'nobu_mod_custom_mod_eventhandler_on_main_window_destructor' =>
-        [ 'html'=>'nobu_mod_custom_mod_eventhandler_on_main_window_destructor.html', 'title'=>'将星録.mod' , 'dir'=>'イベントハンドラ'],
+    'nobu_mod_custom_mod_eventhandler_on_main_window_destruction' =>
+        [ 'html'=>'nobu_mod_custom_mod_eventhandler_on_main_window_destruction.html', 'title'=>'将星録.mod' , 'dir'=>'イベントハンドラ'],
     'nobu_mod_tool_moddebugger' =>
         [ 'html'=>'nobu_mod_tool_moddebugger.html', 'title'=>'将星録.mod' , 'dir'=>'カスタムMod'],
     'nobu_mod_custom_mod_vsinstall' =>

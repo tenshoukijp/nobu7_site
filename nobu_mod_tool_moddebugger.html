@@ -39,7 +39,7 @@
         <legend>ダウンロードした後、<mark>解凍する前</mark>に、zipを「ブロック解除(or 許可する)」必須</legend>
         <p>zipを解凍する際には、「プロパティ」から「ブロック解除(or 許可する)」してください。<br>
             「プロパティ」に「ブロック解除(or 許可する)」といった項目が無いようならこの作業は不要です。</p>
-        <p><img src="./cnt_mod_debugger/cnt_mod_debugger_002.png"></p>
+        <p><img src="./cnt_mod_debugger/cnt_mod_debugger_02.png"></p>
 
     </fieldset>
 </div>
@@ -59,7 +59,8 @@
     <ul class="pointlist">
         <li>
             <h4>「天翔記・天翔記HD・将星録・烈風伝・嵐世記・蒼天録・天下創世・天道・創造・戦国立志伝」に対するモード</h4>
-            <p>これらのいずれかのゲームが立ち上がっていると、そのデバッグ出力(OutputDebugStringのみ)を監視するように、自動的にそのゲームを対象としたものに切り替わります。<br>
+            <p>これらのいずれかのゲームが立ち上がっていると、そのデバッグ出力を監視するように、自動的にそのゲームを対象としたものに切り替わります。<br>
+                (対象はOutputDebugString系 / System.Diagnostics.Trace.WriteLine系 / System.Diagnostics.Debug.WriteLine系)<br>
                 この際は、該当ゲームの｢デバッグモニター監視ツール｣になります。 この間、他の一般アプリケーションの情報は拾いません。<br>
             </p>
         <li>

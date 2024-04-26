@@ -30,3 +30,18 @@ public static void イベントハンドラ(引数型 arg, 返値型 ret)
     値は「int(数値)」もしくは「string(文字列)」にする必要があります。<br>
     少数(double)にしたり、真偽(boolean)にしたり、別のオブジェクトを設定したりといったことはできません。</p>
 </div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>該当のイベントハンドラのargにどのような「キー」と「値」、その値はなんの「型」かを知る例</h3>
+    <pre class="brush:cpp;">
+public static void on武将メッセージ要求時(引数型 arg, 返値型 ret)
+{
+    foreach (var obj in arg)
+    {
+        デバッグ出力($&quot;キー:{obj.Key}, 型{obj.Value.GetType()}, 値:{obj.Value}&quot;);
+    }
+}
+</pre>
+<img src="./cnt_mod_custom/cnt_mod_custom_mod_eventhandler_01.png" /> <br>
+<img src="./cnt_mod_custom/cnt_mod_custom_mod_eventhandler_02.png" /> <br>
+</div>
