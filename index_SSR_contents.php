@@ -48,8 +48,16 @@ $content_hash = [
         [ 'html'=>'nobu_mod_custom_mod.html', 'title'=>'将星録.mod' , 'dir'=>'カスタムMod'],
     'nobu_mod_custom_mod_eventhandler_index' =>
         [ 'html'=>'nobu_mod_custom_mod_eventhandler_index.html', 'title'=>'将星録.mod' , 'dir'=>'イベントハンドラ'],
+    'nobu_mod_custom_mod_eventhandler' =>
+        [ 'html'=>'nobu_mod_custom_mod_eventhandler.html', 'title'=>'将星録.mod' , 'dir'=>'イベントハンドラ'],
+    'nobu_mod_custom_mod_eventhandler_on_main_window_construction' =>
+        [ 'html'=>'nobu_mod_custom_mod_eventhandler_on_main_window_construction.html', 'title'=>'将星録.mod' , 'dir'=>'イベントハンドラ'],
+    'nobu_mod_custom_mod_eventhandler_on_main_window_destructor' =>
+        [ 'html'=>'nobu_mod_custom_mod_eventhandler_on_main_window_destructor.html', 'title'=>'将星録.mod' , 'dir'=>'イベントハンドラ'],
     'nobu_mod_tool_moddebugger' =>
         [ 'html'=>'nobu_mod_tool_moddebugger.html', 'title'=>'将星録.mod' , 'dir'=>'カスタムMod'],
+    'nobu_mod_custom_mod_vsinstall' =>
+        [ 'html'=>'nobu_mod_custom_mod_vsinstall.html', 'title'=>'将星録.mod' , 'dir'=>'カスタムMod'],
     'nobu_data_movie_2x_convert' =>
         [ 'html'=>'nobu_data_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替'],
     'nobu_tool_movie_2x_convert_topaz' =>

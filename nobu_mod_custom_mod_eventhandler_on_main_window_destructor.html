@@ -1,0 +1,68 @@
+%(hilight)s
+<div class="content-box mb-3 content-lighten">
+  <h2><i class="fa fa-book fa-fw"></i>void onメインウィンドウ破棄前(引数型 arg, 返値型 ret)</h2>
+  <div class="code">
+    <pre class="brush:cpp;">
+public static void onメインウィンドウ破棄前(引数型 arg, 返値型 ret)
+{
+}
+</pre>
+  </div>
+
+</div>
+<div class="content-box mb-3 content-lighten">
+  <h3>arg</h3>
+  <p>なし</p>
+  <h3>ret</h3>
+  <p>なし</p>
+</div>
+<div class="content-box mb-3 content-lighten">
+  <h3>タイミング</h3>
+  <ul>
+    <li>将星録のゲームが終了し、ウィンドウが破棄される直後に呼び出される。<br>
+  </ul>
+</div>
+<div class="content-box mb-3 content-lighten">
+  <h3>一般的用途</h3>
+  <ul>
+    <li>ここは永続的なオブジェクト（大抵はファイルもしくはレジストリの特定の書き込み）を削除する、といった解放行為を行うのに適している。
+  </ul>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>例① 初期化に適している</h3>
+  <div class="code">
+    <pre class="brush:csharp;">
+static string fileName = &quot;aaa.txt&quot;;
+
+public static void onメインウィンドウ生成後(引数型 arg, 返値型 ret)
+{
+    try
+    {
+        using (StreamWriter sw = new StreamWriter(fileName, false))
+        {
+            sw.WriteLine(&quot;Hello, World!&quot;);
+        }
+    }
+    catch (Exception e)
+    {
+        MessageBox.Show(e.Message);
+    }
+}
+
+public static void onメインウィンドウ破棄前(引数型 arg, 返値型 ret)
+{
+    try
+    {
+        if (File.Exists(fileName))
+        {
+            File.Delete(fileName);
+        }
+    } catch (Exception e)
+    {
+        MessageBox.Show(e.Message);
+    }
+}
+</pre>
+  </div>
+</div>
