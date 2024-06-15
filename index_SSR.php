@@ -3,7 +3,7 @@
 require( "index_SSR_contents.php" );
 
 function getQueryParam($query_name) {
-	return filter_input(INPUT_GET, $query_name);
+    return filter_input(INPUT_GET, $query_name);
 }
 
 $urlParamPage = getQueryParam('page');
@@ -23,12 +23,14 @@ if ($_SERVER['HTTP_HOST']=="usr.s602.xrea.com") {
     if (str_contains($_SERVER["REQUEST_URI"], "/xn--petw8uc11b.jp")) {
         $OldRequest = $_SERVER["REQUEST_URI"];
         $NewRequest = str_replace("/xn--petw8uc11b.jp", "", $OldRequest);
-	    $NewUrl = "https://xn--petw8uc11b.jp".$NewRequest;
+        $NewUrl = "https://xn--petw8uc11b.jp".$NewRequest;
         header( "HTTP/1.1 301 Moved Permanently" );
-	    header( "Location: ".$NewUrl);
+        header( "Location: ".$NewUrl);
         exit;
     }
 }
+
+$strTitle = "将星録.jp";
 
 
 $strPageFileFullPath = $content_hash[$urlParamPage]['html'];
@@ -44,33 +46,34 @@ $strPageTemplate = preg_replace('/<img\s+src/ms', '<img src', $strPageTemplate);
 
 
 // widthやheightが無いイメージタグにマッチしたら、widthやheightを入れる。
-$strPageTemplate = preg_replace_callback("/(<img src=[\"'])([^\"']+?)([\"'])((\s+class=[\"'][^\"']+?[\"'])?(\s+attr=[\"']noedge[\"'])?(\s+align=[\"'][a-z]+[\"'])?(\s+attr=[\"']noedge[\"'])?>)/",
-                                   function ($matches) {
-                                       // httpが含まれている。
-                                       if (strpos($matches[0],'http') !== false) {
-                                           return $matches[0];
+$strPageTemplate = preg_replace_callback(
+   "/(<img src=[\"'])([^\"']+?)([\"'])((\s+class=[\"'][^\"']+?[\"'])?(\s+attr=[\"']noedge[\"'])?(\s+align=[\"'][a-z]+[\"'])?(\s+attr=[\"']noedge[\"'])?>)/",
+   function ($matches) {
+       // httpが含まれている。
+       if (strpos($matches[0],'http') !== false) {
+           return $matches[0];
 
-                                       // サイト内の画像
-                                       } else {
-                                           $strTargetImageFileName = "/virtual/usr/public_html/xn--petw8uc11b.jp/" . $matches[2];
-										   $strFullPathInfo = pathinfo( $strTargetImageFileName );
-										   $strPathInfoDirName = $strFullPathInfo["dirname"];
-										   $strPathInfoBaseName = $strFullPathInfo["basename"];
-										   $str2xTargetImageFileName = $strPathInfoDirName . "/2x/2x_" . $strPathInfoBaseName;
-										   if (file_exists($str2xTargetImageFileName) ) {
-											   $timeTargetImageUpdate = filemtime($str2xTargetImageFileName);
-											   $strTargetImageUpdate = date("YmdHis", $timeTargetImageUpdate);
-											   list($width, $height, $type, $attr) = getimagesize($strTargetImageFileName);
-											   $strTargetUrlPath = str_replace( $strPathInfoBaseName, "2x/2x_" . $strPathInfoBaseName, $matches[2]);
-											   return $matches[1] . $strTargetUrlPath . "?v=". $strTargetImageUpdate . $matches[3]  . " alt=\"PICTURE\" " . $attr . $matches[4];
-										   } else {
-											   $timeTargetImageUpdate = filemtime($strTargetImageFileName);
-											   $strTargetImageUpdate = date("YmdHis", $timeTargetImageUpdate);
-											   list($width, $height, $type, $attr) = getimagesize($strTargetImageFileName);
-											   return $matches[1] . $matches[2] . "?v=". $strTargetImageUpdate . $matches[3]  . " alt=\"PICTURE\" " . $attr . $matches[4];
-										   }
-                                       }
-                                   }, $strPageTemplate);
+       // サイト内の画像
+       } else {
+           $strTargetImageFileName = "/virtual/usr/public_html/xn--petw8uc11b.jp/" . $matches[2];
+           $strFullPathInfo = pathinfo( $strTargetImageFileName );
+           $strPathInfoDirName = $strFullPathInfo["dirname"];
+           $strPathInfoBaseName = $strFullPathInfo["basename"];
+           $str2xTargetImageFileName = $strPathInfoDirName . "/2x/2x_" . $strPathInfoBaseName;
+           if (file_exists($str2xTargetImageFileName) ) {
+               $timeTargetImageUpdate = filemtime($str2xTargetImageFileName);
+               $strTargetImageUpdate = date("YmdHis", $timeTargetImageUpdate);
+               list($width, $height, $type, $attr) = getimagesize($strTargetImageFileName);
+               $strTargetUrlPath = str_replace( $strPathInfoBaseName, "2x/2x_" . $strPathInfoBaseName, $matches[2]);
+               return $matches[1] . $strTargetUrlPath . "?v=". $strTargetImageUpdate . $matches[3]  . " alt=\"PICTURE\" " . $attr . $matches[4];
+           } else {
+               $timeTargetImageUpdate = filemtime($strTargetImageFileName);
+               $strTargetImageUpdate = date("YmdHis", $timeTargetImageUpdate);
+               list($width, $height, $type, $attr) = getimagesize($strTargetImageFileName);
+               return $matches[1] . $matches[2] . "?v=". $strTargetImageUpdate . $matches[3]  . " alt=\"PICTURE\" " . $attr . $matches[4];
+           }
+       }
+   }, $strPageTemplate);
 
 
 $vsr_array_style  = array( "%(vs2013runtime)s", "%(vs2015runtime)s", "%(vs2017runtime)s", "%(vs2019runtime)s", "%(vs2022runtime)s" );
@@ -292,10 +295,38 @@ if ( $urlParamPage == "nobu_ssr_home" ) {
 }
 
 
+// <h2>タグ内の文字列を取得する
+preg_match('/<h2>(.*?)<\/h2>/s', $strPageTemplate, $matchesTitle);
+if (isset($matchesTitle[1])) {
+    $strH2Content = $matchesTitle[1];
+
+    // タグと改行を削除
+    $strH2ContentCleaned = strip_tags($strH2Content); // タグを削除
+    $strH2ContentCleaned = preg_replace('/\s+/', ' ', $strH2ContentCleaned); // 改行を削除
+
+    // ページ自体が属しているメニューカテゴリ名を取得
+    $strParentDir = $content_hash[$urlParamPage]['dir'];
+
+    // ページのH2要素内の文字列と、カテゴリ名の文字列が類似していれば、「ページのH2の中身」だけ
+    // 全然違うようなら、「カテゴリ | ページのH2の中身」という構成にして妥当性を上げる
+    $lvsDistance = levenshtein($strParentDir, $strH2ContentCleaned);
+    $lvsSimilarity = 1 - $lvsDistance / max(strlen($strParentDir), strlen($strH2ContentCleaned));
+    if ($lvsSimilarity > 0.7) {
+        $strTitle = "将星録.jp | " . $strH2ContentCleaned;
+    } else if (strlen($strParentDir)>1) {
+        $strTitle = "将星録.jp | " . $strParentDir . " | " . $strH2ContentCleaned;
+    } else {
+        $strTitle = "将星録.jp | " . $strH2ContentCleaned;
+    }
+}
+
+
+
 
 // index内にある、スタイル、コンテンツ、階層の開きをそれぞれ、具体的な文字列へと置き換える
 $array_style    = array(
     "%(style_dynamic)s",
+    "%(title)s",
     "%(pagedate)s",
     "%(pageymd)s",
     "%(year)s",
@@ -313,6 +344,7 @@ $array_style    = array(
 );
 $array_template = array(
     $strStyleTemplate,
+    $strTitle, 
     $strPageDate, 
     $strPageYMD,
     $strCurrentYear,
