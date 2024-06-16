@@ -44,6 +44,7 @@ $strPageTemplate = file_get_contents($strPageFileFullPath);
 // まずBOMの除去
 $strPageTemplate = preg_replace('/^\xEF\xBB\xBF/', '', $strPageTemplate);
 
+
 // eclipseのオートフォーマッタが変な所で改行するので対応
 $strPageTemplate = preg_replace('/<img\s+src/ms', '<img src', $strPageTemplate);
 
@@ -189,7 +190,7 @@ function strip_html_comment($str)
     return $str;
 }
 
-$explode_text = explode("\n", strip_html_comment($strIndexTemplate));
+$explode_text = explode("\n", strip_html_comment($strMenuTemplate));
 
 $explode_text_line_count = count($explode_text);
 // 格納用の配列
@@ -275,15 +276,15 @@ $timeFontPluginUpdate = filemtime("./font-awesome/css/font-awesome-plugin.css");
 $strFontPluginUpdate = date("YmdHis", $timeFontPluginUpdate);
 
 // メニューのカスタムCSS
-$timeMLPMCSSUpdate = filemtime("./jquery/jquery.multilevelpushmenu.min.css");
+$timeMLPMCSSUpdate = filemtime("./jquery/hc-offcanvas-nav.custom.css");
 $strMLPMCSSUpdate = date("YmdHis", $timeMLPMCSSUpdate);
 
 // メニューのカスタムJS
-$timeMLPMCustomUpdate = filemtime("./jquery/jquery.multilevelpushmenu.custom.min.js");
+$timeMLPMCustomUpdate = filemtime("./jquery/hc-offcanvas-nav.custom.js");
 $strMLPMCustomUpdate = date("YmdHis", $timeMLPMCustomUpdate);
 
 // パンくずリストJS
-$timeBreadCrumpUpdate = filemtime("jquery/multilevelpushmenu-breadcrump.js");
+$timeBreadCrumpUpdate = filemtime("jquery/hc-offcanvas-nav-breadcrump.js");
 $strBreadCrumpUpdate = date("YmdHis", $timeBreadCrumpUpdate);
 
 
@@ -333,6 +334,7 @@ if (isset($matchesTitle[1])) {
 $array_style    = array(
     "%(style_dynamic)s",
     "%(title)s",
+    "%(description)s",
     "%(pagedate)s",
     "%(pageymd)s",
     "%(year)s",
@@ -352,6 +354,7 @@ $array_style    = array(
 $array_template = array(
     $strStyleTemplate,
     $strTitle,
+    $strDescription,
     $strPageDate,
     $strPageYMD,
     $strCurrentYear,
