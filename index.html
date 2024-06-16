@@ -22,10 +22,10 @@
 <link rel="stylesheet" type="text/css" href="./jquery/hc-offcanvas-nav.custom.css?v=%(mlpmcssdate)s">
 %(style_dynamic)s
 %(shcore_head)s
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.js"></script>
 </head>
 
-<body class="sitebody">
+<body class="sitebody" class="theme-default">
 <div id="pushobj">
 <div id="eventpanel"></div>
 <nav>
@@ -49,19 +49,6 @@
 <script type="text/javascript" src="./jquery/hc-offcanvas-nav.js"></script>
 
 <script>
-// ロケーションの引数の直近の親要素のulに data-nav-active を付与する
-const urlParams = new URLSearchParams(window.location.search);
-const urlParamPage = urlParams.get('page');
-
-if (urlParamPage) {
-  const element = document.getElementById(urlParamPage);
-  if (element) {
-    const ulElement = element.closest('ul');
-    if (ulElement) {
-      ulElement.setAttribute('data-nav-active', '');
-    }
-  }
-}
 </script>
 
 <script type="text/javascript" src="./jquery/hc-offcanvas-nav.custom.js?v=%(mlpmcustomdate)s"></script>
