@@ -9,26 +9,26 @@
         <li>
             <h4>現代のディスプレイの解像度に対してあまりにも小さい将星録のムービー</h4>
             <p>あまりにも小さすぎて悲しくなるサイズと言えるでしょう。</p>
-        <li>
+        </li><li>
             <h4>特殊なアルゴリズムでムービーの解像度を２倍にして、状況を打開する</h4>
             <p>このページでは、画像を拡大するツールとして非常に有名な、「waifu2x-caffe」を使い、<br>
                 解像度をアップコンバートすることで、 ある程度、この問題への解決を狙います。</p>
             <p>通常の「Adore PremiereやAdobe AfterEffectsなど映像ツールで解像度を２倍にする」といった一般的手法とは違い、<br>
                 「高度で多計算による解像度の２倍化」となりますので、変換には相当時間がかかります。</p>
-        <li>
+        </li><li>
             <h4>将星録に限定されない内容</h4>
             <p>なお、ここに記載されている内容やツールは、将星録に限定されるものではなく、<br>
                 「動画の解像度を綺麗な形で２倍にする」という汎用的な目的にもかなうモノとなっています。</p>
             <p>
-    </ul>
+    </p></li></ul>
     <p>
-        <fieldset class="alert alert-warning">
+        </p><fieldset class="alert alert-warning">
             <legend>Windowsをバージョンの大型更新をすると、Xdivの再インストールが必要</legend>
             Xdivのcodecは、Windowsを22H2⇒22H3など、大型のバージョンアップした再には、登録しているcodec情報が一部クリアされてしまいます。<br>
                 これにより、Xdiv codecのムービーそのままだと、将星録が起動できなくなってしまいます。<br>
                 この再には、改めて、上記codecを再インストールしてください。
         </fieldset>
-    </p>
+    <p></p>
 </div>
 <div class="content-box mb-3 content-lighten">
     <h3>TsMovie2xConverter によって ２倍化されたサンプル</h3>
@@ -42,7 +42,7 @@
         <li>
             <h4>Windows OS</h4>
             <p>Windows 7 64bit 以降が必要です。(32bitだと無理です)</p>
-    </ul>
+    </li></ul>
 </div>
 <div class="content-box mb-3 content-lighten">
     <h3>準備その① (ムービー ⇔ 連番画像の相互変換のため)</h3>
@@ -50,7 +50,7 @@
         <li>
             <h4>ツール</h4>
             <p><b>FFmpeg/FFprobe</b> をインストールしてください。</p>
-        <li>
+        </li><li>
             <h4>FFmpeg (ソフト)</h4>
             <div class="card mb-3 ml-3" style="max-width: 30rem;">
                 <!-- カード本文：card-body -->
@@ -72,11 +72,11 @@
                         このffmpeg.exeを適当なツールっぽいフォルダに移動し、以後これを利用するようにします。 <br>
                         <img src="./cnt_movie/cnt_nobu_tool_movie_2x_convert_01.png"><br>
                     </p>
-            </ul>
-            </p>
+            </li></ul>
+            <p></p>
             <p>この２つを適当なフォルダにコピーしてください。<br>
                 有名なコマンドアプリケーションですので、それなりのディレクトリにコピーしておくことをお勧めします。</p>
-    </ul>
+    </li></ul>
 </div>
 <div class="content-box mb-3 content-lighten">
     <h3>準備その② (連番画像を２倍に拡大するため)</h3>
@@ -89,7 +89,7 @@
             <p><span class="positive">全体で100メガを超えるファイルサイズのツールですが、サブディレクトリも含め、ディレクトリ一式必要です。</span></p>
             <p>2015年以降、急速に有名になったアプリケーションですので、<br>
                 それなりのディレクトリにコピーしておくことをお勧めします。</p>
-    </ul>
+    </li></ul>
 </div>
 <div class="content-box mb-3 content-lighten">
     <h3>TsMovie2xConverter (準備①と準備②のツールを使い、動画を２倍化するため)</h3>
@@ -126,27 +126,26 @@
     </p>
     <ul>
         <li>導入しているffmpeg.exe / ffprobe.exeへのフルパス
-        <li>導入しているwaifu2x-cafee-cui.exeへのフルパス
-        <li>NVIDIA製のグラボなら"gpu"、NVIDIA以外のグラボ(あるいは不明)なら"cpu"へと書き換えてください。<br>
+        </li><li>導入しているwaifu2x-cafee-cui.exeへのフルパス
+        </li><li>NVIDIA製のグラボなら"gpu"、NVIDIA以外のグラボ(あるいは不明)なら"cpu"へと書き換えてください。<br>
             (cpuの場合は、変換には３倍ほど時間がかかります)
-        <li><span class="negative">シングルクォーテーション「'」をダブルクォーテーション「"」に書き換えたりしないで</span>ください。<br>
+        </li><li><span class="negative">シングルクォーテーション「'」をダブルクォーテーション「"」に書き換えたりしないで</span>ください。<br>
             解釈が変わってエラーになります。<br>
             ディレクトリ内に空白が含まれていたとしても、ダブルクォーテーションは不要です。</li>
     </ul>
     <div class="code">
-        <pre class="brush:perl;">
-# ffmpegのフルパスを設定してください。
+        <pre class="brush:perl;"># ffmpegのフルパスを設定してください。
 $ffmpeg  = 'C:\usr\ffmpeg\ffmpeg.exe';
 $ffprobe = 'C:\usr\ffmpeg\ffprobe.exe';
 
 # waifu2x-cafee-cuiのフルパスを設定してください。
 $waifu2x = 'C:\usr\waifu2x-caffe\waifu2x-caffe-cui.exe';
 
-# gpuが使えるのは、NVIDIA製GPUのみです。IntelやRadeonの人は &quot;cpu&quot; と書き換えてください。
-$process = &quot;gpu&quot;;
+# gpuが使えるのは、NVIDIA製GPUのみです。IntelやRadeonの人は "cpu" と書き換えてください。
+$process = "gpu";
 
 # コンバートする拡張子
-$extension = &quot;.avi&quot;;
+$extension = ".avi";
     </pre>
     </div>
 </div>

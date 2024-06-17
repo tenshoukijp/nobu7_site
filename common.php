@@ -19,6 +19,7 @@ if (!array_key_exists($urlParamPage, $content_hash)) {
     $urlParamPage = "401";
 }
 
+/*
 if ($_SERVER['HTTP_HOST'] == "usr.s602.xrea.com") {
     if (str_contains($_SERVER["REQUEST_URI"], "/" . $punnyAddress)) {
         $OldRequest = $_SERVER["REQUEST_URI"];
@@ -29,6 +30,7 @@ if ($_SERVER['HTTP_HOST'] == "usr.s602.xrea.com") {
         exit;
     }
 }
+*/
 
 $strMenuTemplate = file_get_contents("menu.html");
 // まずBOMの除去
@@ -303,9 +305,9 @@ if ($urlParamPage == $defaultHomePage) {
 
 
 // <h2>タグ内の文字列を取得する
-preg_match('/<h2>(.*?)<\/h2>/s', $strPageTemplate, $matchesTitle);
-if (isset($matchesTitle[1])) {
-    $strH2Content = $matchesTitle[1];
+preg_match('/<h2( .+?)?>(.*?)<\/h2>/is', $strPageTemplate, $matchesTitle);
+if (isset($matchesTitle[2])) {
+    $strH2Content = $matchesTitle[2];
 
     // タグと改行を削除
     $strH2ContentCleaned = strip_tags($strH2Content); // タグを削除

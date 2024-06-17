@@ -51,7 +51,6 @@
 
 %(shcore_foot)s
 %(mathjax_foot)s
-
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

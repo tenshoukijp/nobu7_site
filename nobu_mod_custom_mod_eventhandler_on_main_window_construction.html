@@ -2,10 +2,9 @@
 <div class="content-box mb-3 content-lighten">
   <h2><i class="fa fa-book fa-fw"></i>void onメインウィンドウ生成後(引数型 arg, 返値型 ret)</h2>
   <div class="code">
-    <pre class="brush:cpp;">
-public static void onメインウィンドウ生成後(引数型 arg, 返値型 ret)
+    <pre class="brush:cpp;">public static void onメインウィンドウ生成後(引数型 arg, 返値型 ret)
 {
-    nint hWind = (nint)(int)arg[&quot;ウィンドウハンドル&quot;];
+    nint hWind = (nint)(int)arg["ウィンドウハンドル"];
 }
 </pre>
   </div>
@@ -17,7 +16,7 @@ public static void onメインウィンドウ生成後(引数型 arg, 返値型 
     <li>
       <h4>ウィンドウハンドル : int型</h4>
       将星録のゲームウィンドウのハンドル。ウィンドウを移動させたりサイズを変更したりといったことに利用できる。
-  </ul>
+  </li></ul>
 </div>
 <div class="content-box mb-3 content-lighten">
   <h3>ret</h3>
@@ -28,26 +27,25 @@ public static void onメインウィンドウ生成後(引数型 arg, 返値型 
   <ul>
     <li>将星録のゲームのウィンドウが生成される直後に呼び出される。<br>
       (内部的なインスタンスが確定された後、まだ実際に画面には表示されていない段階)
-  </ul>
+  </li></ul>
 </div>
 <div class="content-box mb-3 content-lighten">
   <h3>一般的用途</h3>
   <ul>
     <li>ここはゲーム起動における初期化処理をするのに適している
-    <li>後でウィンドウの位置やサイズを変更するため、ウィンドウハンドルを控えておくのに適している
-  </ul>
+    </li><li>後でウィンドウの位置やサイズを変更するため、ウィンドウハンドルを控えておくのに適している
+  </li></ul>
 </div>
 
 <div class="content-box mb-3 content-lighten">
   <h3>例① 初期化に適している</h3>
   <div class="code">
-    <pre class="brush:csharp;">
-static int 変数1 = 0;
-static string 変数2 = &quot;&quot;;
+    <pre class="brush:csharp;">static int 変数1 = 0;
+static string 変数2 = "";
 public static void onメインウィンドウ生成後(引数型 arg, 返値型 ret)
 {
     変数1 = 100;
-    変数2 = &quot;メインウィンドウ生成後&quot;;
+    変数2 = "メインウィンドウ生成後";
 }
 </pre>
   </div>
@@ -56,11 +54,10 @@ public static void onメインウィンドウ生成後(引数型 arg, 返値型 
 <div class="content-box mb-3 content-lighten">
   <h3>例② ウィンドウハンドルの取得</h3>
   <div class="code">
-    <pre class="brush:csharp;">
-public static void onメインウィンドウ生成後(引数型 arg, 返値型 ret)
+    <pre class="brush:csharp;">public static void onメインウィンドウ生成後(引数型 arg, 返値型 ret)
 {
-    デバッグ出力(&quot;メインウィンドウ生成後&quot;);
-    IntPtr hWnd = (IntPtr)(int)arg[&quot;ウィンドウハンドル&quot;];
+    デバッグ出力("メインウィンドウ生成後");
+    IntPtr hWnd = (IntPtr)(int)arg["ウィンドウハンドル"];
 }
   </pre>
   </div>
@@ -70,25 +67,24 @@ public static void onメインウィンドウ生成後(引数型 arg, 返値型 
 <div class="content-box mb-3 content-lighten">
   <h3>例③ ウィンドウハンドルを控えておき、オープニングムービー時に1600x900にリサイズして画面中央に表示</h3>
   <div class="code">
-    <pre class="brush:csharp;">
-[DllImport(&quot;user32.dll&quot;, SetLastError = true)]
+    <pre class="brush:csharp;">[DllImport("user32.dll", SetLastError = true)]
 public static extern bool MoveWindow(IntPtr hWnd, int x, int y, int nWidth, int nHeight, bool bRepaint);
 
 static nint hWnd = 0;
 
 public static void onメインウィンドウ生成後(引数型 arg, 返値型 ret)
 {
-    デバッグ出力(&quot;メインウィンドウ生成後&quot;);
+    デバッグ出力("メインウィンドウ生成後");
 
     // 後でウィンドウの位置やサイズを変更するために控えておく
-    hWnd = (nint)(int)arg[&quot;ウィンドウハンドル&quot;];
+    hWnd = (nint)(int)arg["ウィンドウハンドル"];
 }
 
 public static void onムービー要求時(引数型 arg, 返値型 ret)
 {
   // オープニングムービーが再生されるタイミングで、ウィンドウサイズを変更する。
-  string ファイル名 = (string)arg[&quot;ファイル名&quot;];
-  if (ファイル名.ToLower().Contains(&quot;opening.avi&quot;)) {
+  string ファイル名 = (string)arg["ファイル名"];
+  if (ファイル名.ToLower().Contains("opening.avi")) {
       int width = 1600;
       int height = 900;
 
