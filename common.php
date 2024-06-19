@@ -227,7 +227,7 @@ $explode_text_line_count = count($explode_text);
 // 格納用の配列
 $explode_array = array();
 for ($i = 0; $i < $explode_text_line_count; $i++) {
-    preg_match("/id=\"(nobu_.+?)\"/", $explode_text[$i], $explode_line_match);
+    preg_match("/id=\"((HD_)?nobu_.+?)\"/", $explode_text[$i], $explode_line_match);
     if ($explode_line_match) {
         if (array_key_exists($explode_line_match[1], $content_hash)) {
             if (count($explode_array) > 0) {
