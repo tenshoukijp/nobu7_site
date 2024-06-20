@@ -1,3 +1,4 @@
+%(hilight)s
 <div class="content-box mb-3 content-lighten">
   <h2><i class="fa fa-book fa-fw"></i>void onメインウィンドウ生成後(引数型 arg, 返値型 ret)</h2>
   <div class="code">
