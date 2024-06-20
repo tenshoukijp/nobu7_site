@@ -11,7 +11,11 @@ $orgParamPage = getQueryParam('page');
 
 
 // rel=canonical の設定
-if ( $urlParamPage != "" ) {
+if ( $urlParamPage == "" ) {
+    $strCanonical = "https://" . $punnyAddress . "/";
+} else if ( $urlParamPage == $defaultHomePage ) {
+    $strCanonical = "https://" . $punnyAddress . "/";
+} else {
 
     $strCanonicalKey = $urlParamPage;
     // 一番最後の2があるキーは、2が無いものとhtmlを比べて、同じhtmlを示しているならば、
@@ -34,8 +38,6 @@ if ( $urlParamPage != "" ) {
 
 
     $strCanonical = "https://" . $punnyAddress . "/?page=" . $strCanonicalKey;
-} else {
-    $strCanonical = "https://" . $punnyAddress . "/";
 }
 
 
@@ -361,6 +363,14 @@ if (isset($matchesTitle[2])) {
 
 
 
+// style_override.css というファイルがあれば、置き換える。
+$strStyleOverrideTemplate = "";
+if (file_exists('style_override.css') ) {
+    $strStyleOverrideTemplate = file_get_contents("style_override.css");
+    $strStyleOverrideTemplate = "<style>\n" . $strStyleOverrideTemplate . "</style>";
+}
+
+
 // index内にある、スタイル、コンテンツ、階層の開きをそれぞれ、具体的な文字列へと置き換える
 $array_style    = array(
     "%(style_dynamic)s",
@@ -371,6 +381,7 @@ $array_style    = array(
     "%(pageymd)s",
     "%(year)s",
     "%(menu)s",
+    "%(style_override)s",
     "%(expand)s",
     "%(styleupdate)s",
     "%(fontpluginupdate)s",
@@ -392,6 +403,7 @@ $array_template = array(
     $strPageYMD,
     $strCurrentYear,
     $strMenuTemplate,
+    $strStyleOverrideTemplate,
     $strMenuExpand,
     $strStyleUpdate,
     $strFontPluginUpdate,
