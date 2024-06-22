@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://xn--petw8uc11b.jp/sitemap.xml

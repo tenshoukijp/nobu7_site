@@ -1,6 +1,6 @@
 <?php
 
-require( "index_SSR_contents.php" );
+require( "contents.php" );
 
 $punnyAddress = "xn--petw8uc11b.jp";
 

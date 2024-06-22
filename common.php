@@ -4,32 +4,11 @@ $fileDirectory = $punnyAddress;
 
 require("./php/common_query_param.php");
 
+require("./php/common_load_menu_html.php");
+
 require("./php/common_canonical.php");
 
-// デフォルトのページ
-if ($urlParamPage == "") {
-    $urlParamPage = $defaultHomePage;
-}
-
-if (!array_key_exists($urlParamPage, $content_hash)) {
-    $urlParamPage = "401";
-}
-
-
-$strMenuTemplate = file_get_contents("menu.html");
-// まずBOMの除去
-$strMenuTemplate = preg_replace('/^\xEF\xBB\xBF/', '', $strMenuTemplate);
-
-
-$strPageFileFullPath = $content_hash[$urlParamPage]['html'];
-
-// コンテンツのページテンプレート読み込み
-$strPageTemplate = file_get_contents($strPageFileFullPath);
-
-
-// まずBOMの除去
-$strPageTemplate = preg_replace('/^\xEF\xBB\xBF/', '', $strPageTemplate);
-
+require("./php/common_load_target_html.php");
 
 require("./php/common_image.php");
 
