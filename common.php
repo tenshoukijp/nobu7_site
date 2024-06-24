@@ -6,6 +6,8 @@ require("./php/common_query_param.php");
 
 require("./php/common_load_menu_html.php");
 
+require("./php/common_breadcrumb.php");
+
 require("./php/common_canonical.php");
 
 require("./php/common_load_target_html.php");
