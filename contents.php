@@ -67,7 +67,11 @@ $content_hash = [
     'nobu_data_movie_convert_method' =>
         [ 'html'=>'nobu_data_movie_convert_method.html', 'title'=>'ムービーの変換' , 'dir'=>'映像入替'],
     'nobu_movie_2x_convert' =>
-        [ 'html'=>'nobu_tool_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替']
+        [ 'html'=>'nobu_tool_movie_2x_convert.html', 'title'=>'ムービーの２倍化' , 'dir'=>'映像入替'],
+
+    'nobu_site_the_profile' =>
+        [ 'html'=>'nobu_site_the_profile.html', 'title'=>'プロフィール' , 'dir'=>'コンタクト']
+
 ];
 
 
