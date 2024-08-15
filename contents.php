@@ -2,6 +2,8 @@
 $content_hash = [
 	'401' =>
         [ 'html'=>'401.html', 'title'=>'ホーム' , 'dir'=>''],
+	'404' =>
+        [ 'html'=>'404.html', 'title'=>'ホーム' , 'dir'=>''],
 
     'nobu_ssr_home' =>
         [ 'html'=>'nobu_ssr_home.html', 'title'=>'トップページ' , 'dir'=>''],
@@ -22,8 +24,6 @@ $content_hash = [
         [ 'html'=>'nobu_data_bushoulist.html', 'title'=>'武将一覧' , 'dir'=>''],
     'nobu_mod_environment' =>
         [ 'html'=>'nobu_mod_environment.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
-    'nobu_mod_modupdater' =>
-        [ 'html'=>'nobu_mod_base_mod.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
     'nobu_mod_base_mod' =>
         [ 'html'=>'nobu_mod_base_mod.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
     'nobu_mod_base_mod_override' =>

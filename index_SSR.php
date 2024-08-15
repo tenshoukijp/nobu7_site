@@ -12,6 +12,8 @@ $defaultHomePage = "nobu_ssr_home";
 
 $indexFileName = "index.html";
 
+// $strHcOffcanvasNavCss = "hc-offcanvas-nav.green.css";
+
 require( "common.php");
 ?>
 
