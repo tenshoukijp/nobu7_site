@@ -26,6 +26,8 @@ $content_hash = [
         [ 'html'=>'nobu_mod_environment.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
     'nobu_mod_base_mod' =>
         [ 'html'=>'nobu_mod_base_mod.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
+    'nobu_mod_base_mod_update' =>
+        [ 'html'=>'nobu_mod_base_mod_update.html', 'title'=>'将星録.mod' , 'dir'=>'将星録.mod'],
     'nobu_mod_base_mod_override' =>
         [ 'html'=>'nobu_mod_base_mod_override.html', 'title'=>'将星録.mod' , 'dir'=>'OVERRIDE'],
     'nobu_mod_base_mod_whats_override' =>
