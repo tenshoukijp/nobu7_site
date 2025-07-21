@@ -1,0 +1,1 @@
+waifu2x-caffeとffmpegを使い、将星録のムービーを高画質に2倍化するツール。FFmpegとwaifu2x-caffeを別途準備し、iniファイルにパスを設定後、ツールを実行。変換には時間がかかる。

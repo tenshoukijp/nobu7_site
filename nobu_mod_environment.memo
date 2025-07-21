@@ -1,0 +1,1 @@
+将星録.mod導入前にSteamフォルダのUAC設定を確認。Program Files(x86)下にある場合、Nobunaga7WPKフォルダのプロパティからUsersにフルコントロール権限を与える必要がある。
